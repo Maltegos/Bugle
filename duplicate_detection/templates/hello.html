@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      justify-content: center;
+      align-items: center;
+      }
+      h1, h4 {
+      margin: 15px 0 4px;
+      font-weight: 400;
+      text-align:center;
+      }
+      h4 {
+      margin: 20px 0 4px;
+      font-weight: 400;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      }
+      .small {
+      font-size: 10px;
+      line-height: 18px;
+      text-align:center;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      visibility: visible;
+      }
+      form {
+      width: 100%;
+      padding: 70px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc;
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      .button {
+      text-align: center;
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      ul {
+      list-style-type: none;
+      padding: 0;
+      border: 1px solid #ddd;
+      }
+
+      ul li {
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      }
+      ul li:last-child {
+      border-bottom: none
+      }
+      .mw-portlet-body li:hover {
+      background-color: rgba(242, 242, 242, 1);
+      }
+      li:hover {
+      border-color: #777;
+      box-shadow: 3px 3px 5px #333;
+
+      background: #eeeeee; /* Old browsers */
+      background: -moz-linear-gradient(top, #dddddd 0%, #ffffff 25%, #ffffff 75%, #dddddd 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* IE10+ */
+      background: linear-gradient(to bottom, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+      }
+    </style>
+  </head>
+  <body>
+  <div class="testbox">
+        <h1>Bug Report Submission Form</h1>
+    </div>
+    <div id="myDiv" class="testbox">
+        <form>
+            {% csrf_token %}
+        </form>
+    </div>
+    <div class="mw-portlet-body">
+        <div class="testbox">
+            <ul>
+                {% for bug in similar %}
+                <li onclick="javascript:alert('Saved selected bug report')";>
+                     <p>
+                        {{ bug }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+</script>

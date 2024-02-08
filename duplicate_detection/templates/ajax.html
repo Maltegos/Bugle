@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      justify-content: center;
+      align-items: center;
+      }
+      h1, h4 {
+      margin: 15px 0 4px;
+      font-weight: 400;
+      text-align:center;
+      }
+      h4 {
+      margin: 20px 0 4px;
+      font-weight: 400;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      }
+      .small {
+      font-size: 10px;
+      line-height: 18px;
+      text-align:center;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      visibility: visible;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 50px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      ul {
+      list-style-type: none;
+      padding: 0;
+      border: 1px solid #ddd;
+      display: inline;
+      }
+
+      ul li {
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      }
+
+      ul li:last-child {
+      border-bottom: none
+      }
+      table {
+      width: 50%;
+      }
+      th {
+      background: #f1f1f1;
+      font-weight: bold;
+      padding: 6px;
+      }
+      td {
+      background: #f9f9f9;
+      padding: 6px;
+      }
+      li:hover {
+      border-color: #777;
+      box-shadow: 3px 3px 5px #333;
+      background: #eeeeee; /* Old browsers */
+      background: -moz-linear-gradient(top, #dddddd 0%, #ffffff 25%, #ffffff 75%, #dddddd 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* IE10+ */
+      background: linear-gradient(to bottom, #dddddd 0%,#ffffff 25%,#ffffff 75%,#dddddd 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+      }
+      img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10%;
+      height: 10%;
+      }
+      .example1 {
+      border: 2px solid black;
+      padding: 10px;
+      border-radius: 25px;
+      }
+      h1 {
+      font-family: Monospace, Monaco, sans-serif;
+      font-size: 300%;
+      }
+      p {
+        font-size: 20px;
+      }
+
+    .container {
+        background-color: rgb(192, 192, 192);
+        width: 80%;
+        border-radius: 15px;
+    }
+
+    .skill0 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .skill1 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .skill2 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .skill3 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .skill4 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .skill5 {
+        background-color: rgb(116, 194, 92);
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .html1 {
+        width: 0%;
+    }
+    .html2 {
+        width: 0%;
+    }
+    .html3 {
+        width: 0%;
+    }
+    .html4 {
+        width: 0%;
+    }
+    .html5 {
+        width: 0%;
+    }
+    .html6 {
+        width: 0%;
+    }
+
+    </style>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+      </script>
+   </head>
+   <body>
+      <div>
+        <h1>Bugle</h1>
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/69357/bugle-clipart-xl.png" alt="Trulli" type="button" onclick="play()">
+          <audio id="audio" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+      </div>
+      <script>
+          function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+
+          }
+      </script>
+      <div id="myDiv" class="testbox">
+       <form id="post-form" >
+           {% csrf_token %}
+           <div id="example1">
+               <input type="text" id="description" name="description" class="example1" style="height:50px" size="120" placeholder="Enter a description..." /><br>
+               <input type="button" id="but" />
+           </div>
+       </form>
+      </div>
+      <p id="no_found" align="center"></p>
+   <table id="results" style="width:100%">
+        <tr id="the_table">
+            <th style="width:10%">Similarity</th>
+            <th style="width:15%">Summary</th>
+            <th style="width:60%">Description</th>
+            <th style="width:10%">Created</th>
+            <th style="width:5%">Issue ID</th>
+        </tr>
+        <tr id="one">
+            <td>
+                <div class="container" id="first_accuracy">
+                    <div id="first_result" class="skill0 html1"></div>
+                </div>
+            </td>
+            <td id="first_summary"></td>
+            <td id="first_description"></td>
+            <td id="first_created"></td>
+            <td id="first_issueID"></td>
+        </tr>
+        <tr id="two">
+            <td>
+                <div class="container" id="second_accuracy">
+                    <div id="second_result" class="skill1 html2"></div>
+                </div>
+            </td>
+            <td id="second_summary"></td>
+            <td id="second_description"></td>
+            <td id="second_created"></td>
+            <td id="second_issueID"></td>
+        </tr>
+        <tr id="three">
+            <td>
+                <div class="container" id="third_accuracy">
+                    <div id="third_result" class="skill2 html3"></div>
+                </div>
+            </td>
+            <td id="third_summary"></td>
+            <td id="third_description"></td>
+            <td id="third_created"></td>
+            <td id="third_issueID"></td>
+        </tr>
+       <tr id="four">
+           <td>
+                <div class="container" id="fourth_accuracy">
+                    <div id="fourth_result" class="skill3 html4"></div>
+                </div>
+            </td>
+           <td id="fourth_summary"></td>
+            <td id="fourth_description"></td>
+            <td id="fourth_created"></td>
+            <td id="fourth_issueID"></td>
+        </tr>
+       <tr id="five">
+           <td>
+                <div class="container" id="fifth_accuracy">
+                    <div id="fifth_result" class="skill4 html5"></div>
+                </div>
+            </td>
+           <td id="fifth_summary"></td>
+            <td id="fifth_description"></td>
+            <td id="fifth_created"></td>
+            <td id="fifth_issueID"></td>
+        </tr>
+       <tr id="six">
+           <td>
+                <div class="container" id="sixth_accuracy">
+                    <div id="sixth_result" class="skill5 html6"></div>
+                </div>
+            </td>
+           <td id="sixth_summary"></td>
+            <td id="sixth_description"></td>
+            <td id="sixth_created"></td>
+            <td id="sixth_issueID"></td>
+        </tr>
+    </table>
+
+   </body>
+
+   <script type="text/javascript">
+       $("#the_table").hide();
+       $(document).on('click', '#post-form', function(e){
+           e.preventDefault();
+
+           $.ajax({
+               type:'POST',
+               url:'/create',
+               data:{
+                   description:$('#description').val(),
+                   csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+               },
+               success: function (data){
+                   var lenght = data.similar.length;
+                   for (let i = 0; i < lenght; i++) {
+                       var score = data.similar[i][0];
+                       var score1 = parseFloat(score.toString()).toFixed(2)
+                       string_score = score1 * 100;
+                       if (string_score < 40){
+                           $(".skill" + i.toString()).css("background-color", "red");
+                       }
+                       else if (string_score >= 40 && string_score < 55){
+                           $(".skill" + i.toString()).css("background-color", "orange");
+                       }
+                       else if (string_score >= 55){
+                           $(".skill" + i.toString()).css("background-color", "green");
+                       }
+                   }
+                   var lenght = 0;
+                   $.each(data.similar, function() {
+                       lenght += 1;
+                   });
+                   if (lenght <= 0){
+                       $("#no_found").show();
+                       $("#results").hide();
+                       $("#no_found").text("Did not find any recommendations");
+                       $("#one").hide();
+                       $("#two").hide();
+                       $("#three").hide();
+                       $("#four").hide();
+                       $("#five").hide();
+                       $("#six").hide();
+                   }
+
+                   if (lenght > 0){
+                       $("#the_table").show();
+                       var first_score = data.similar[0];
+                       var string_score = parseFloat(first_score.toString()).toFixed(2)
+                       string_score = string_score * 100;
+                       var s_score = string_score.toFixed(0).toString();
+                       var ss_score = s_score+"%";
+                       var first_summary = data.similar[0][1].summary;
+                       var first_description = data.similar[0][1].description;
+                       var first_created =  data.similar[0][1].created;
+                       var first_issueID =  data.similar[0][1].issue_id;
+                       $("#first_result").text(ss_score);
+                       $(".html1").css("width", ss_score);
+                       $("#first_summary").text(first_summary);
+                       $("#first_description").text(first_description);
+                       $("#first_created").text(first_created);
+                       $("#first_issueID").text(first_issueID);
+                       if (lenght < 2){
+                           $("#second_result").text("");
+                           $("#second_summary").text("");
+                           $("#second_description").text("");
+                           $("#second_created").text("");
+                           $("#second_issueID").text("");
+                           $("#third_result").text("");
+                           $("#third_summary").text("");
+                           $("#third_description").text("");
+                           $("#third_created").text("");
+                           $("#third_issueID").text("");
+                           $("#fourth_result").text("");
+                           $("#fourth_summary").text("");
+                           $("#fourth_description").text("");
+                           $("#fourth_created").text("");
+                           $("#fourth_issueID").text("");
+                           $("#fifth_result").text("");
+                           $("#fifth_summary").text("");
+                           $("#fifth_description").text("");
+                           $("#fifth_created").text("");
+                           $("#fifth_issueID").text("");
+                           $("#sixth_result").text("");
+                           $("#sixth_summary").text("");
+                           $("#sixth_description").text("");
+                           $("#sixth_created").text("");
+                           $("#sixth_issueID").text("");
+                           $(".html2").css("width", "0%");
+                           $(".html3").css("width", "0%");
+                           $(".html4").css("width", "0%");
+                           $(".html5").css("width", "0%");
+                           $(".html6").css("width", "0%");
+                           $("#one").show();
+                           $("#two").hide();
+                           $("#three").hide();
+                           $("#four").hide();
+                           $("#five").hide();
+                           $("#six").hide();
+                           $("#no_found").hide();
+                       }
+                   }
+                   if (lenght > 1) {
+                       var second_score = data.similar[1];
+                       var string_score1 = parseFloat(second_score.toString()).toFixed(2)
+                       string_score1 = string_score1 * 100;
+                       var s_score1 = string_score1.toFixed(0).toString();
+                       var ss_score1 = s_score1 + "%";
+                       var second_summary = data.similar[1][1].summary;
+                       var second_description = data.similar[1][1].description;
+                       var second_created = data.similar[1][1].created;
+                       var second_issueID = data.similar[1][1].issue_id;
+                       $("#second_result").text(ss_score1);
+                       $(".html2").css("width", ss_score1);
+                       $("#second_summary").text(second_summary);
+                       $("#second_description").text(second_description);
+                       $("#second_created").text(second_created);
+                       $("#second_issueID").text(second_issueID);
+                       if (lenght < 3){
+                           $("#third_result").text("");
+                           $("#third_summary").text("");
+                           $("#third_description").text("");
+                           $("#third_created").text("");
+                           $("#third_issueID").text("");
+                           $("#fourth_result").text("");
+                           $("#fourth_summary").text("");
+                           $("#fourth_description").text("");
+                           $("#fourth_created").text("");
+                           $("#fourth_issueID").text("");
+                           $("#fifth_result").text("");
+                           $("#fifth_summary").text("");
+                           $("#fifth_description").text("");
+                           $("#fifth_created").text("");
+                           $("#fifth_issueID").text("");
+                           $("#sixth_result").text("");
+                           $("#sixth_summary").text("");
+                           $("#sixth_description").text("");
+                           $("#sixth_created").text("");
+                           $("#sixth_issueID").text("");
+                           $(".html3").css("width", "0%");
+                           $(".html4").css("width", "0%");
+                           $(".html5").css("width", "0%");
+                           $(".html6").css("width", "0%");
+                           $("#one").show();
+                           $("#two").show();
+                           $("#three").hide();
+                           $("#four").hide();
+                           $("#five").hide();
+                           $("#six").hide();
+                           $("#no_found").hide();
+                       }
+                   }
+                   if (lenght > 2) {
+                       var third_score = data.similar[2];
+                       var string_score2 = parseFloat(third_score.toString()).toFixed(2)
+                       string_score2 = string_score2 * 100;
+                       var s_score2 = string_score2.toFixed(0).toString();
+                       var ss_score2 = s_score2 + "%";
+                       var third_summary = data.similar[2][1].summary;
+                       var third_description = data.similar[2][1].description;
+                       var third_created = data.similar[2][1].created;
+                       var third_issueID = data.similar[2][1].issue_id;
+                       $("#third_result").text(ss_score2);
+                       $(".html3").css("width", ss_score2);
+                       $("#third_summary").text(third_summary);
+                       $("#third_description").text(third_description);
+                       $("#third_created").text(third_created);
+                       $("#third_issueID").text(third_issueID);
+                       if (lenght < 4){
+                           $("#fourth_result").text("");
+                           $("#fourth_summary").text("");
+                           $("#fourth_description").text("");
+                           $("#fourth_created").text("");
+                           $("#fourth_issueID").text("");
+                           $("#fifth_result").text("");
+                           $("#fifth_summary").text("");
+                           $("#fifth_description").text("");
+                           $("#fifth_created").text("");
+                           $("#fifth_issueID").text("");
+                           $("#sixth_result").text("");
+                           $("#sixth_summary").text("");
+                           $("#sixth_description").text("");
+                           $("#sixth_created").text("");
+                           $("#sixth_issueID").text("");
+                           $(".html4").css("width", "0%");
+                           $(".html5").css("width", "0%");
+                           $(".html6").css("width", "0%");
+                           $("#two").show();
+                           $("#three").show();
+                           $("#four").hide();
+                           $("#five").hide();
+                           $("#six").hide();
+                           $("#no_found").hide();
+                       }
+                   }
+                   if (lenght > 3) {
+                       var fourth_score = data.similar[3];
+                       var string_score3 = parseFloat(fourth_score.toString()).toFixed(2)
+                       string_score3 = string_score3 * 100;
+                       var s_score3 = string_score3.toFixed(0).toString();
+                       var ss_score3 = s_score3 + "%";
+                       var fourth_summary = data.similar[3][1].summary;
+                       var fourth_description = data.similar[3][1].description;
+                       var fourth_created = data.similar[3][1].created;
+                       var fourth_issueID = data.similar[3][1].issue_id;
+                       $("#fourth_result").text(ss_score3);
+                       $(".html4").css("width", ss_score3);
+                       $("#fourth_summary").text(fourth_summary);
+                       $("#fourth_description").text(fourth_description);
+                       $("#fourth_created").text(fourth_created);
+                       $("#fourth_issueID").text(fourth_issueID);
+                       if (lenght < 5){
+                           $("#fifth_result").text("");
+                           $("#fifth_summary").text("");
+                           $("#fifth_description").text("");
+                           $("#fifth_created").text("");
+                           $("#fifth_issueID").text("");
+                           $("#sixth_result").text("");
+                           $("#sixth_summary").text("");
+                           $("#sixth_description").text("");
+                           $("#sixth_created").text("");
+                           $("#sixth_issueID").text("");
+                           $(".html5").css("width", "0%");
+                           $(".html6").css("width", "0%");
+                           $("#two").show();
+                           $("#three").show();
+                           $("#four").show();
+                           $("#five").hide();
+                           $("#six").hide();
+                           $("#no_found").hide();
+                       }
+                   }
+                   if (lenght > 4) {
+                       var fifth_score = data.similar[4];
+                       var string_score4 = parseFloat(fifth_score.toString()).toFixed(2)
+                       string_score4 = string_score4 * 100;
+                       var s_score4 = string_score4.toFixed(0).toString();
+                       var ss_score4 = s_score4 + "%";
+                       var fifth_summary = data.similar[4][1].summary;
+                       var fifth_description = data.similar[4][1].description;
+                       var fifth_created = data.similar[4][1].created;
+                       var fifth_issueID = data.similar[4][1].issue_id;
+                       $("#fifth_result").text(ss_score4);
+                       $(".html5").css("width", ss_score4);
+                       $("#fifth_summary").text(fifth_summary);
+                       $("#fifth_description").text(fifth_description);
+                       $("#fifth_created").text(fifth_created);
+                       $("#fifth_issueID").text(fifth_issueID);
+                       if (lenght < 6){
+                           $("#sixth_result").text("");
+                           $("#sixth_summary").text("");
+                           $("#sixth_description").text("");
+                           $("#sixth_created").text("");
+                           $("#sixth_issueID").text("");
+                           $(".html6").css("width", "0%");
+                           $("#two").show();
+                           $("#three").show();
+                           $("#four").show();
+                           $("#five").show();
+                           $("#six").hide();
+                           $("#no_found").hide();
+                       }
+                   }
+                   if (lenght > 5) {
+                       var sixth_score = data.similar[5];
+                       var string_score5 = parseFloat(sixth_score.toString()).toFixed(2)
+                       string_score5 = string_score5 * 100;
+                       var s_score5 = string_score5.toFixed(0).toString();
+                       var ss_score5 = s_score5 + "%";
+                       var sixth_summary = data.similar[5][1].summary;
+                       var sixth_description = data.similar[5][1].description;
+                       var sixth_created = data.similar[5][1].created;
+                       var sixth_issueID = data.similar[5][1].issue_id;
+                       $("#sixth_result").text(ss_score5);
+                       $(".html6").css("width", ss_score5);
+                       $("#sixth_summary").text(sixth_summary);
+                       $("#sixth_description").text(sixth_description);
+                       $("#sixth_created").text(sixth_created);
+                       $("#sixth_issueID").text(sixth_issueID);
+                       $("#one").show();
+                       $("#two").show();
+                       $("#three").show();
+                       $("#four").show();
+                       $("#five").show();
+                       $("#six").show();
+                       $("#no_found").hide();
+                   }
+               },
+
+           });
+       });
+    var newInput = "";
+    var wait = false;
+    var but = document.getElementById("but");
+    var form = document.getElementById("post-form");
+    but.style.visibility= 'hidden';
+    var last_input_time = new Date();
+    var counter = 0;
+    var refreshIntervalId;
+    var nr_input;
+    var last_input_time = new Date();
+    document.getElementById("results").style.display = "none";
+    // For every new char input
+    // when iput is given, store what was given and save the time of last input
+    console.log("Start counter is: ", counter);
+
+    form.addEventListener("input", function(e) {
+        // store the full string of chars
+        counter += 1;
+        newInput += e.data;
+        //console.log("nedInput is: ", newInput);
+        //console.log("counter is: ", counter);
+        // If a first input has been given, start interval
+        if (counter === 1){
+            console.log("Started interval");
+            refreshIntervalId = setInterval(passInput, 1000);
+        }
+        last_input_time = new Date().getTime();
+        //getTimeDiff(time);
+
+    });
+
+    form.addEventListener("keypress", function(e) {
+        // store the full string of chars
+        //console.log("nedInput is: ", newInput);
+        //console.log("counter is: ", counter);
+        // If a first input has been given, start interval
+        if (e.key === "Enter"){
+            e.preventDefault();
+        }
+        //getTimeDiff(time);
+
+    });
+
+    function createTable(){
+
+    }
+
+    function passInput(){
+        //console.log("Inside passInput, newInput is: " + newInput);
+        var final_time = last_input_time - new Date().getTime();
+        //console.log("Final time is : " + final_time);
+        if (final_time < -300){
+            if (!newInput){
+                console.log("New input is not a new char: is is: " + newInput);
+                return
+            }
+            console.log("THREE SECONDS SINCE LAST INPUT, send: " + newInput);
+            clearInterval(refreshIntervalId);
+            counter = 0;
+            console.log("CLICK");
+            but.click();
+            document.getElementById("results").style.display = "block";
+            //var text = document.createTextNode();
+            }
+        }
+   </script>
+</html>
